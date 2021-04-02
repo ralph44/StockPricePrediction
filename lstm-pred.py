@@ -9,7 +9,7 @@ from datetime import datetime
 import numpy as np
 import sys
 
-company_ticker = "PLTR" # Ticker der Apple Aktie
+company_ticker = "AAPL" # Ticker der Apple Aktie
 train_von = "2010-12-16" # Startpunkt der Trainingsdaten
 train_bis = "2021-03-01" # Endpunkt der Trainingsdaten
 test_bis = datetime.now() # Startpunkt der Testdaten zur Validierung
@@ -35,7 +35,7 @@ X_train = []
 y_train = []
 
 # Anzahl der Schlusskurse, die in das Modell kommen 
-zeitraum_der_vorhersage = 15
+zeitraum_der_vorhersage = 10
 # Transformieren der Daten in einzelne Sequenzen 
 # Eine Sequenz beinhaltet dann 10 Schlusskurse 
 for i in range(zeitraum_der_vorhersage, len(training_datensatz_skaliert)):
